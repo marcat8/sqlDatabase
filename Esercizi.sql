@@ -50,3 +50,11 @@ order by autore.Cognome, autore.Nome, romanzo.AnnoPubblicazione
 select romanzo.Titolo, romanzo.AnnoPubblicazione
 from Romanzo, Autore
 where romanzo.Autore = Autore.id && Autore.DataMorte is null
+
+/*9. Romanzi di scrittori viventi, oppure morti ma non a Torino*/
+select *
+from Romanzo, Autore
+where Autore = autore.ID && (DataMorte is null ||
+LuogoMorte != "Torino")
+
+
