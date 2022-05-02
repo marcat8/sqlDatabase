@@ -62,4 +62,9 @@ select romanzo.Titolo, romanzo.AnnoPubblicazione
 from Romanzo, Autore
 where Autore = autore.id && LuogoNascita = "Roma"
 
+/*11*/
+select *
+from Romanzo
+where Titolo like "Tokyo%"
+
 
