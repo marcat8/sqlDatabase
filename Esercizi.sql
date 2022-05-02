@@ -92,4 +92,7 @@ select *
 from Romanzo
 where AnnoPubblicazione <1900 && (Titolo like "%Sposi%" || Titolo like "%sposi%")
 
-
+/*17*/
+select Romanzo.*
+from Romanzo, Autore
+where Autore = autore.id && autore.Nome = "Alessandro" && autore.Cognome = "Manzoni"
