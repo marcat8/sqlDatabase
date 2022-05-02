@@ -82,4 +82,9 @@ select *
 from Romanzo
 where Titolo like "%blues"
 
+/*15*/
+select *
+from Romanzo
+where AnnoPubblicazione >= 1901 && AnnoPubblicazione <= 2000 && Titolo like "%Zeno%"
+
 
