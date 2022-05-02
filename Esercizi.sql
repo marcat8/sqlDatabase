@@ -72,5 +72,9 @@ select *
 from Romanzo
 where Titolo like "%Sposi%"
 
+/*13*/
+select *
+from Romanzo
+where Titolo like "%i_"
 
 
