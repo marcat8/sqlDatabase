@@ -77,4 +77,9 @@ select *
 from Romanzo
 where Titolo like "%i_"
 
+/*14*/
+select *
+from Romanzo
+where Titolo like "%blues"
+
 
