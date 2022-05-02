@@ -87,4 +87,9 @@ select *
 from Romanzo
 where AnnoPubblicazione >= 1901 && AnnoPubblicazione <= 2000 && Titolo like "%Zeno%"
 
+/*16*/
+select *
+from Romanzo
+where AnnoPubblicazione <1900 && (Titolo like "%Sposi%" || Titolo like "%sposi%")
+
 
