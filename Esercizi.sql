@@ -54,7 +54,12 @@ where romanzo.Autore = Autore.id && Autore.DataMorte is null
 /*9. Romanzi di scrittori viventi, oppure morti ma non a Torino*/
 select *
 from Romanzo, Autore
-where Autore = autore.ID && (DataMorte is null ||
+where Autore = autore.id && (DataMorte is null ||
 LuogoMorte != "Torino")
+
+/*10*/
+select romanzo.Titolo, romanzo.AnnoPubblicazione
+from Romanzo, Autore
+where Autore = autore.id && LuogoNascita = "Roma"
 
 
