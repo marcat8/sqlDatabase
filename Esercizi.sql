@@ -1,3 +1,5 @@
+Use libreria;
+
 /*1. Romanzi pubblicati nel 2009*/
 select *
 from Romanzo
@@ -96,3 +98,13 @@ where AnnoPubblicazione <1900 && (Titolo like "%Sposi%" || Titolo like "%sposi%"
 select Romanzo.*
 from Romanzo, Autore
 where Autore = autore.id && autore.Nome = "Alessandro" && autore.Cognome = "Manzoni"
+
+/*18*/
+select distinct *
+from Romanzo, Autore
+where romanzo.Autore = autore.id && autore.Nome = "Don" && autore.Cognome = "DeLillo"
+
+/*19*/
+select Romanzo.*
+from Romanzo, Personaggio, PersonaggioRomanzo
+where personaggio.Nome = "Benjamin" && personaggio.Cognome = "Malaussène" personaggio.id = PersonaggioRomanzo.Personaggio && romanzo.id = PersonaggioRomanzo.Romanzo
