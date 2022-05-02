@@ -70,6 +70,6 @@ where Titolo like "Tokyo%"
 /*12*/
 select *
 from Romanzo
-where Titolo like "%Sposi%""
+where Titolo like "%Sposi%"
 
 
