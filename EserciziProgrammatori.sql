@@ -16,3 +16,12 @@ select programmatore.codice, programma.anno
 from autore  join programma on programma.id = Autore.id
     join programmatore on programmatore.codice = autore.codice
 where programma.linguaggio != "Java" && programmatore.categoria = 10
+
+/*query 4*/
+
+/*query 5*/
+select programmatore.codice, programmatore.nome
+from autore  join programma on programma.id = Autore.id
+    join programmatore on programmatore.codice = autore.codice
+where programma.linguaggio = "Java"
+
