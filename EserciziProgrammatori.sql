@@ -18,10 +18,16 @@ from autore  join programma on programma.id = Autore.id
 where programma.linguaggio != "Java" && programmatore.categoria = 10
 
 /*query 4*/
+select distinct p1.codice as coautore1, p2.codice as coautore2
+from autore  join programma on programma.id = Autore.id
+    join programmatore p1 on p1.codice = autore.codice
+    join programmatore p2 on p2.codice = autore.codice
+where programma.linguaggio = "Python"
 
 /*query 5*/
 select programmatore.codice, programmatore.nome
 from autore  join programma on programma.id = Autore.id
     join programmatore on programmatore.codice = autore.codice
 where programma.linguaggio = "Java"
+
 
