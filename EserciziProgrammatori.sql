@@ -30,4 +30,11 @@ from autore  join programma on programma.id = Autore.id
     join programmatore on programmatore.codice = autore.codice
 where programma.linguaggio = "Java"
 
+select p.nome, p.codice
+from Programmatore p join Autore a on p.codice = a.codice
+    join Programma pr on pr.id = a.id
+where pr.linguaggio = "Java" 
+group by pr.linguaggio
+
+
 
